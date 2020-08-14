@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background:  rgb(255, 255, 0) url('https://devcareer.io/images/bg.svg');
+    color: rgb(4, 206, 71); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+.wrapper {
+    
+    width: 22rem;
+    /* padding: 2rem; */
+    border-radius: 1rem;
+    box-shadow: 0px;
+    box-shadow: 1px 2px 10px 4px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+}
+
+.header {
+    background: url('https://devcareer.io/images/bg.svg'), linear-gradient(45deg, rgb(255, 255, 0)
+    , rgb(4, 206, 71));
+    padding: 1rem 2rem;
+}
+
+.header h1 {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.8rem;
+}
+
+.header p {
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.header .d-flex {
+    position: relative;
+}
+
+.header .d-flex .clear {
+    position: absolute;
+    right: 0;
+    color: #efefef;
+    cursor: pointer;
+}
+
+.header .d-flex .clear .fa-sync-alt:hover {
+    transform: rotate(45deg);
+}
+/* 
+.outputList div {
+    display: flex;
+    list-style: none;
+    margin-top: 0.3rem;
+} */
+
+/* .outputList li {
+    margin-left: -10rem;
+}
+
+.outputList time {
+    margin-right: -10rem;
+} */
+/* 
+.outputList li {
+    margin-right: auto;
+    margin-left: 0.3rem;
+}
+
+.outputList time {
+    margin-right: auto;
+}
+
+.inputDiv {
+    width: 100%;
+    margin: 0.4rem;
+}
+
+.inputDiv #toDoInput {
+    outline: none;
+    font-size: 16px;
+} */

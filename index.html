@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeJapa ToDo App</title>
+
+    <!--GOOGLE FONT-->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Mulish&family=Open+Sans&display=swap" rel="stylesheet">
+
+    
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1 class="text-center">Wejapa To-Dos</h1>
+            <p class="text-center">This is a ToDo app, a JavaScript task given at WeJapa Internship</p>
+            <div class="d-flex">
+                <div id="date"></div>
+                <div class="clear">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+            </div>
+        </div>
+
+        <ul class="outputList">
+        </ul>
+    
+    
+        <div class="inputDiv">
+            <input type="text" placeholder="What I want to do..." id="toDoInput">
+            <input type="time" name="time" id="time">
+            <button id="addInput">Add Task</button>
+        </div>
+    </div>
+
+    <!--VANILLA JS-->
+    <script src="app.js"></script>
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/6629e20d42.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
