@@ -1,23 +1,29 @@
+const dateElement = document.getElementById('date');
+const clear = document.querySelector(".clear");
+const outputList = document.querySelector('.outputList');
 const toDoInput = document.getElementById('toDoInput');
 const timeInput = document.getElementById('time');
-const dateElement = document.getElementById('date');
-const outputList = document.querySelector('.outputList');
-const add = document.getElementById('addInput')
 
 //set date
 const option = {weekday:"long", month:"short", day:"numeric"};
 const now = new Date();
 dateElement.innerHTML = now.toLocaleDateString("en-US", option);
 
+//clear an item from the local storage
+clear.addEventListener("click", function() {
+    localStorage.clear();
+    location.reload();
+});
+
 //adding new element
-add.addEventListener('click', function() {
+function addInput() {
     //create a new list dynamically
     const toDo = document.createElement('div');
     toDo.classList.add('newToDo');
 
     //check your todo after it has been completed
-    const checkToDo = document.createElement('cheCK');
-    checkToDo.innerHTML = '<i class="fas fa-check-circle"> </li>'
+    const checkToDo = document.createElement('button');
+    checkToDo.innerHTML = '#'
     checkToDo.classList.add('check');
     toDo.appendChild(checkToDo);
 
@@ -34,9 +40,9 @@ add.addEventListener('click', function() {
     toDo.appendChild(timeToDo);
     
     //delete an item from the list
-    const deleteToDo = document.createElement('span');
-    deleteToDo.innerHTML = '<i class="fas fa-trash-alt"> </i>';
-    deleteToDo.classList.add('deletebtn');
+    const deleteToDo = document.createElement('button');
+    deleteToDo.innerHTML = 'Del';
+    deleteToDo.classList.add('delete');
     toDo.appendChild(deleteToDo);
 
 
@@ -46,10 +52,13 @@ add.addEventListener('click', function() {
         outputList.appendChild(toDo); // the input is appended to the ul
     }
 
+    //set local storage (set item to where list is updated)
+    // localStorage.setItem("TODO", JSON.stringify(LIST));
+
     toDoInput.value = ""; // empty todo input after being added to ul
     timeInput.value = ""; // empty todo input after being added to ul
 
-});
+};
 
 outputList.addEventListener('click', check);
 function check(evt) {
@@ -57,13 +66,15 @@ function check(evt) {
     let elementJob = myToDoList.parentElement;
 
     //delete an item from the list
-    if (myToDoList.classList[0] === 'deletebtn') {
+    if (myToDoList.classList[0] === 'delete') {
         outputList.removeChild(elementJob);
     }
     
     //check an item in the list
     if (myToDoList.classList[0] === 'check') {
-        outputList.classList.toggle('checked');
-        return;
+        elementJob.classList.toggle('checked');
     }
+
+    //set local storage (set item to where list is updated)
+    // localStorage.setItem("TODO", JSON.stringify(LIST));
 }

@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeJapa ToDo App</title>
+    <title>ToDo App</title>
+
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!--GOOGLE FONT-->
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Mulish&family=Open+Sans&display=swap" rel="stylesheet">
-
-    
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="wrapper">
         <div class="header">
-            <h1 class="text-center">Wejapa To-Dos</h1>
-            <p class="text-center">This is a ToDo app, a JavaScript task given at WeJapa Internship</p>
+            <h1 class="text-center">To-Do App</h1>
             <div class="d-flex">
                 <div id="date"></div>
                 <div class="clear">
@@ -32,7 +32,7 @@
         <div class="inputDiv">
             <input type="text" placeholder="What I want to do..." id="toDoInput">
             <input type="time" name="time" id="time">
-            <button id="addInput">Add Task</button>
+            <button onclick="addInput()">Add Task</button>
         </div>
     </div>
 

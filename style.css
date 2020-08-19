@@ -30,6 +30,7 @@ body {
     background: url('https://devcareer.io/images/bg.svg'), linear-gradient(45deg, rgb(255, 255, 0)
     , rgb(4, 206, 71));
     padding: 1rem 2rem;
+    height: 8rem;
 }
 
 .header h1 {
@@ -37,14 +38,14 @@ body {
     font-size: 1.8rem;
 }
 
-.header p {
-    font-family: 'Caveat', cursive;
-    font-size: 1.2rem;
-    line-height: 1.4;
-}
-
 .header .d-flex {
     position: relative;
+    margin-top: 2.5rem;
+}
+
+.header .d-flex #date {
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
 }
 
 .header .d-flex .clear {
@@ -57,21 +58,27 @@ body {
 .header .d-flex .clear .fa-sync-alt:hover {
     transform: rotate(45deg);
 }
-/* 
+
+.outputList {
+    height: 20rem;
+    overflow-y: scroll;
+}
+
 .outputList div {
     display: flex;
     list-style: none;
-    margin-top: 0.3rem;
-} */
+    margin: 0.24rem 0.9rem;
 
-/* .outputList li {
+}
+
+.outputList li {
     margin-left: -10rem;
 }
 
 .outputList time {
     margin-right: -10rem;
-} */
-/* 
+}
+
 .outputList li {
     margin-right: auto;
     margin-left: 0.3rem;
@@ -81,12 +88,43 @@ body {
     margin-right: auto;
 }
 
-.inputDiv {
-    width: 100%;
-    margin: 0.4rem;
+.checked {
+    text-decoration: line-through;
+    opacity: 0.3;
+    cursor: pointer;
+    padding: 3px;
+    width: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.inputDiv #toDoInput {
+
+.outputList .delete {
+    font-family: 'Caveat', cursive;
     outline: none;
-    font-size: 16px;
-} */
+    padding: 3px;
+    border-radius: 1rem;
+    border: none;
+}
+
+.outputList .delete:hover {
+    background: #f03636;
+    color: #efefee;
+}
+
+.inputDiv {
+    display: grid;
+    margin: 0.3rem 1.5rem ;
+}
+
+.inputDiv input, .inputDiv button {
+    outline: none;
+    margin-top: 0.2rem;
+    font-size: 18px;
+    border: 1px solid #000;
+}
+
+.inputDiv button:hover {
+    color: rgb(255, 255, 0);
+    background: rgb(4, 206, 71);
+}
